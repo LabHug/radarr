@@ -11,6 +11,7 @@ Although this image can be used on it's own, it's designed specifically to be us
 
 ## Getting Started
 
+Basic Usage
 ```
 docker run -dt \
     --name=radarr \
