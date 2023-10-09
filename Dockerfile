@@ -29,10 +29,6 @@ COPY init.sh /init.sh
 
 EXPOSE 7878
 
-HEALTHCHECK --start-period=10s --timeout=5s \
-    CMD wget -qO /dev/null 'http://localhost:7878/api/v3/system/status' \
-            --header "x-api-key: $(xmlstarlet sel -t -v '/Config/ApiKey' /config/config.xml)"
-
 RUN chown -R labhug:labhug /config /app
 
 CMD ["su-exec", "labhug:labhug", "/app/Radarr", "--no-browser", "--data=/config"]
