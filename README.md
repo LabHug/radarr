@@ -21,7 +21,7 @@ docker run -dt \
 
 ## Roadmap
 
-The goals for this repository are fairly simple.  Create a lightweight image that can be used as a standalone container, and work well within the Helm chart as well.
+The goals for this repository are fairly simple.  Create a lightweight image that can be used as a standalone container, and work within the Helm chart as well.
 
 ## Help
 
