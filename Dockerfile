@@ -1,4 +1,4 @@
-FROM ghcr.io/labhug/baseimage-alpine:latest
+FROM ghcr.io/labhug/baseimage-alpine:v0.1.1
 
 ARG RADARR_BRANCH=master
 ARG RADARR_VER=5.0.3.8127
@@ -9,7 +9,6 @@ LABEL org.opencontainers.image.authors="Daniel Henry <iamdanhenry@gmail.com>" \
       org.opencontainers.image.description="A movie management and downloader tool" \
       org.opencontainers.image.version=${RADARR_VER} \
       io.spritsail.version.radarr=${RADARR_VER}
-
 
 RUN apk add --no-cache \
        icu-libs \
@@ -26,7 +25,7 @@ RUN apk add --no-cache \
        /app/radarr/bin/Radarr.Update \
        /tmp/*
        
-
+COPY init.sh /init.sh
 
 EXPOSE 7878
 
