@@ -1,4 +1,4 @@
-FROM ghcr.io/labhug/baseimage-alpine:v0.1.1
+FROM ghcr.io/labhug/baseimage-alpine:latest
 
 ARG RADARR_BRANCH=master
 ARG RADARR_VER=5.0.3.8127
